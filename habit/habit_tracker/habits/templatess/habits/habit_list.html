@@ -1,0 +1,13 @@
+<!-- templates/habits/habit_list.html -->
+<h2>Your Habits</h2>
+<ul>
+    {% for habit in habits %}
+    <li>{{ habit.name }} 
+        <a href="{% url 'edit_habit' habit.id %}">Edit</a> |
+        <a href="{% url 'delete_habit' habit.id %}">Delete</a> |
+        <a href="{% url 'complete_habit' habit.id %}">Complete</a> |
+        <a href="{% url 'habit_progress' habit.id %}">Progress</a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'add_habit' %}">Add a New Habit</a>

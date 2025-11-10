@@ -1,0 +1,6 @@
+<!-- templates/habits/add_habit.html -->
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Habit</button>
+</form>
